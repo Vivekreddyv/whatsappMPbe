@@ -1,5 +1,5 @@
 const mongoose=require('mongoose')
-const mongodbURL="mongodb+srv://saivivek1414:whatsappmarketplace8797@cluster0.33wvkjc.mongodb.net/whatsapp?retryWrites=true&w=majority"
+const mongodbURL=process.env.mongodbURL
 
 
 const mongodb=async()=>{
