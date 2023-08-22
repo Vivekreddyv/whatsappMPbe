@@ -15,6 +15,7 @@ app.use('/api',require('./routes/groups.js'))
 app.use('/api',require('./routes/itemsdata.js'))
 app.use('/api',require('./routes/displaygroup.js'))
 app.use('/api',require('./routes/displayitems.js'))
+app.use('/api',require('./routes/deleteitem.js'))
 
 app.listen(PORT,()=>{
     console.log(`server is listening to ${PORT}`)
