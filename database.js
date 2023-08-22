@@ -15,13 +15,13 @@ const mongodb=async()=>{
 
 
         groupsdata.watch().on('change',async(change)=>{
-            if(change.operationType==='insert'|| change.operationType==='update'){
+            if(change.operationType==='insert'|| change.operationType==='update'|| change.operationType==='delete'){
                 const updateddata1=await groupsdata.find({}).toArray()
                 global.datagroups=updateddata1
             }
         })
         itemsdata.watch().on('change',async(change)=>{
-            if(change.operationType==='insert'|| change.operationType==='update'){
+            if(change.operationType==='insert'|| change.operationType==='update'|| change.operationType==='delete'){
                 const updateddata2=await itemsdata.find({}).toArray()
                 global.dataitems=updateddata2
             }
